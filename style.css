@@ -131,6 +131,32 @@ body {
   max-width: 1280px;
 }
 
+/* ── Code & Dataset button ── */
+.code-bar {
+  text-align: center;
+  padding: 20px 0 0;
+}
+
+.code-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: #2f6fed;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(47,111,237,0.3);
+}
+
+.code-btn:hover {
+  background: #1d5cd4;
+  box-shadow: 0 4px 14px rgba(47,111,237,0.4);
+}
+
 /* ── Demo section heading ── */
 .demo-heading {
   padding: 0 0 4px;
