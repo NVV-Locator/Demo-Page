@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NVV-Locator — Qualitative Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>NVV-Locator: From Transcript Tags to Acoustic Boundaries<br>for Fine-Grained Nonverbal Vocalization Grounding</h1>
+      <div class="abstract-wrapper">
+        <details class="abstract-details" open>
+          <summary class="abstract-toggle">Abstract</summary>
+          <p class="abstract">
+            Human speech includes nonverbal vocalizations (NVVs), such as laughter, sighs, breaths, and coughs, which convey affective and interactional information. Existing approaches typically represent NVVs as transcript-level tags, providing limited supervision for their waveform-time boundaries. We present NVV-Locator for fine-grained NVV temporal grounding. We first unify 26 NVV categories across public resources and construct large-scale timestamp-supervised training data through dual-LLM verification, transcript-guided forced alignment, and energy-based boundary refinement. We further introduce NVV-TimeBench, an expert-refined benchmark with 667 utterances and 1,094 events. NVV-Locator uses a non-autoregressive slot-filling architecture to jointly predict lexical timestamps, NVV categories, and event boundaries. On NVV-TimeBench, it achieves 71.0% Micro F1, 70.2% Macro F1, 80.4% Macro mIoU, and 59.6 ms Macro mMAE, outperforming the evaluated large audio model counterparts. Evaluation on an external corpus further demonstrates the cross-corpus generalization of NVV-Locator.
+          </p>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <section class="model-section wrap">
+    <figure class="model-fig">
+      <figcaption class="fig-caption">Figure 1: Overview of the NVV-Locator architecture.</figcaption>
+      <img class="model-img" src="assets/model.png" alt="NVV-Locator model architecture diagram">
+    </figure>
+  </section>
+
+  <div class="divider wrap"></div>
+
+  <section class="demo-heading wrap">
+    <h2>Qualitative Comparison on NVV-TimeBench</h2>
+    <p class="demo-sub">
+      26 NVV event types, IoU ≥ 0.5. Each case: NV-Locator correctly localizes the target;
+      all four commercial audio LLMs miss the target interval.
+    </p>
+  </section>
+
+  <div class="layout wrap">
+    <nav class="sidebar" id="nav"></nav>
+    <main class="main" id="main">
+      <p class="loading">Loading samples…</p>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
