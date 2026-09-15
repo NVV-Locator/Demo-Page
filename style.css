@@ -124,6 +124,87 @@ body {
   box-shadow: 0 1px 6px rgba(0,0,0,0.08);
 }
 
+/* ── Taxonomy table ── */
+.taxonomy-section {
+  padding: 24px 0 0;
+}
+
+.taxonomy-fig {
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px 20px 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.taxonomy-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.taxonomy-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.taxonomy-table th,
+.taxonomy-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 8px 10px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.taxonomy-table thead th {
+  background: #f0f3f8;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  border-bottom: 2px solid var(--line);
+  position: sticky;
+  top: 0;
+}
+
+.taxonomy-table .col-family { width: 18%; }
+.taxonomy-table .col-canonical { width: 20%; white-space: nowrap; }
+.taxonomy-table .col-source { width: 62%; }
+
+.taxonomy-table td.family-cell {
+  font-weight: 700;
+  color: var(--ink);
+  background: #f8f9fb;
+  border-right: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.taxonomy-table tbody tr:hover td:not(.family-cell) {
+  background: #f5f8ff;
+}
+
+.taxonomy-table tr.family-sep td {
+  border-top: 2px solid var(--line);
+}
+
+.taxonomy-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.taxonomy-table em {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.taxonomy-table strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .divider {
   height: 1px;
   background: var(--line);

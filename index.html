@@ -28,6 +28,132 @@
     </figure>
   </section>
 
+  <section class="taxonomy-section wrap">
+    <figure class="taxonomy-fig">
+      <figcaption class="fig-caption">Table 1: Unified 26-category NVV taxonomy and mappings from source datasets to canonical labels.</figcaption>
+      <div class="taxonomy-scroll">
+        <table class="taxonomy-table">
+          <thead>
+            <tr>
+              <th class="col-family">Family</th>
+              <th class="col-canonical">Canonical Category</th>
+              <th class="col-source">Source Datasets and Original Labels</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="family-cell" rowspan="19">Physical Vocal Event</td>
+              <td>Sniff</td>
+              <td><strong>NVS-38K</strong> ([sniff]); <strong>MNV-17</strong> ([sniffle])</td>
+            </tr>
+            <tr>
+              <td>Snore</td>
+              <td><strong>NVS-38K</strong> ([snore])</td>
+            </tr>
+            <tr>
+              <td>Whistle</td>
+              <td><strong>MNV-17</strong> ([whistle])</td>
+            </tr>
+            <tr>
+              <td>Hum</td>
+              <td><strong>MNV-17</strong> ([hum])</td>
+            </tr>
+            <tr>
+              <td>Sneeze</td>
+              <td><strong>MNV-17</strong> ([sneeze])</td>
+            </tr>
+            <tr>
+              <td>Yawn</td>
+              <td><strong>NVS-38K</strong> ([yawn])</td>
+            </tr>
+            <tr>
+              <td>Moan</td>
+              <td><strong>MNV-17</strong> ([moan])</td>
+            </tr>
+            <tr>
+              <td>Cry</td>
+              <td><strong>NVS-38K</strong>, <strong>SMIIP-NV</strong> ([crying]); <strong>NVSpeech-170k</strong> ([Crying])</td>
+            </tr>
+            <tr>
+              <td>Cough</td>
+              <td><strong>NVS-38K</strong> ([coughing]); <strong>NVSpeech-170k</strong> ([Cough]); <strong>MNV-17</strong>, <strong>SMIIP-NV</strong> ([cough])</td>
+            </tr>
+            <tr>
+              <td>Throat Clearing</td>
+              <td><strong>NVS-38K</strong> ([throatclearing]); <strong>MNV-17</strong> ([ahem])</td>
+            </tr>
+            <tr>
+              <td>Sigh</td>
+              <td><strong>NVS-38K</strong>, <strong>MNV-17</strong> ([sigh]); <strong>NVSpeech-170k</strong> ([Sigh])</td>
+            </tr>
+            <tr>
+              <td>Lip Smack</td>
+              <td><strong>MNV-17</strong> ([smack])</td>
+            </tr>
+            <tr>
+              <td>Hiss</td>
+              <td><strong>MNV-17</strong> ([hiss])</td>
+            </tr>
+            <tr>
+              <td>Gasp</td>
+              <td><strong>NVS-38K</strong> ([gasp])</td>
+            </tr>
+            <tr>
+              <td>Laughter</td>
+              <td><strong>NVS-38K</strong> ([laughing]); <strong>NVSpeech-170k</strong> ([Laughter]); <strong>MNV-17</strong> ([laugh], [chuckle]); <strong>SMIIP-NV</strong> ([laughter])</td>
+            </tr>
+            <tr>
+              <td>Breath</td>
+              <td><strong>NVS-38K</strong> ([breath]); <strong>NVSpeech-170k</strong> ([Breathing]); <strong>MNV-17</strong> ([inhale/exhale/pant])</td>
+            </tr>
+            <tr>
+              <td>Scream</td>
+              <td><em>Added in this work</em></td>
+            </tr>
+            <tr>
+              <td>Roar</td>
+              <td><em>Added in this work</em></td>
+            </tr>
+            <tr>
+              <td>Burp</td>
+              <td><em>Added in this work</em></td>
+            </tr>
+            <tr class="family-sep">
+              <td class="family-cell" rowspan="6">Functional Interjection</td>
+              <td>Shush</td>
+              <td><strong>NVSpeech-170k</strong> ([Shh])</td>
+            </tr>
+            <tr>
+              <td>Confirmation-X</td>
+              <td><strong>NVSpeech-170k</strong> ([Confirmation-en])</td>
+            </tr>
+            <tr>
+              <td>Dissatisfaction-X</td>
+              <td><strong>NVSpeech-170k</strong> ([Dissatisfaction-hnn])</td>
+            </tr>
+            <tr>
+              <td>Question-X</td>
+              <td><strong>NVSpeech-170k</strong> ([Question-en/ah/oh/ei/yi])</td>
+            </tr>
+            <tr>
+              <td>Filled Pause</td>
+              <td><strong>NVSpeech-170k</strong> ([Uhm])</td>
+            </tr>
+            <tr>
+              <td>Surprise-X</td>
+              <td><strong>NVSpeech-170k</strong> ([Surprise-ah/oh/wa/yo])</td>
+            </tr>
+            <tr class="family-sep">
+              <td class="family-cell">Associated Non-Speech Event</td>
+              <td>Applause</td>
+              <td><strong>MNV-17</strong> ([clap], [applaud])</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+  </section>
+
   <section class="code-bar wrap">
     <a class="code-btn" href="https://github.com/NVV-Locator/NVV-Locator-Code" target="_blank" rel="noopener">
       <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
