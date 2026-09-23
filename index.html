@@ -4,12 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NVV-Locator — Qualitative Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#demo">Skip to qualitative comparison</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <span class="brand-mark">NVV</span>
+        <span class="brand-name">NVV-Locator</span>
+        <span class="brand-sep">·</span>
+        <span class="brand-sub">Qualitative Demo</span>
+      </div>
+      <nav class="top-nav" aria-label="Page sections">
+        <a href="#abstract">Abstract</a>
+        <a href="#figure">Figure</a>
+        <a href="#taxonomy">Taxonomy</a>
+        <a href="#demo">Demo</a>
+        <a class="nav-code" href="https://github.com/NVV-Locator/NVV-Locator-Code" target="_blank" rel="noopener">Code &amp; Dataset</a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="site-header" id="abstract">
     <div class="wrap">
+      <p class="kicker">Fine-grained nonverbal vocalization grounding</p>
       <h1>NVV-Locator: From Transcript Tags to Acoustic Boundaries<br>for Fine-Grained Nonverbal Vocalization Grounding</h1>
+      <div class="metrics" aria-label="Reported results on NVV-TimeBench">
+        <div class="metric"><span class="metric-val">71.0%</span><span class="metric-lab">Micro F1</span></div>
+        <div class="metric"><span class="metric-val">70.2%</span><span class="metric-lab">Macro F1</span></div>
+        <div class="metric"><span class="metric-val">80.4%</span><span class="metric-lab">Macro mIoU</span></div>
+        <div class="metric"><span class="metric-val">59.6 ms</span><span class="metric-lab">Macro mMAE</span></div>
+      </div>
       <div class="abstract-wrapper">
         <details class="abstract-details" open>
           <summary class="abstract-toggle">Abstract</summary>
@@ -21,16 +51,16 @@
     </div>
   </header>
 
-  <section class="model-section wrap">
+  <section class="model-section wrap" id="figure">
     <figure class="model-fig">
-      <figcaption class="fig-caption">Figure 1: Overview of the NVV-Locator architecture.</figcaption>
+      <figcaption class="fig-caption"><span class="fig-id">Figure 1</span> Overview of the NVV-Locator architecture.</figcaption>
       <img class="model-img" src="assets/model.png" alt="NVV-Locator model architecture diagram">
     </figure>
   </section>
 
-  <section class="taxonomy-section wrap">
+  <section class="taxonomy-section wrap" id="taxonomy">
     <figure class="taxonomy-fig">
-      <figcaption class="fig-caption">Table 1: Unified 26-category NVV taxonomy and mappings from source datasets to canonical labels.</figcaption>
+      <figcaption class="fig-caption"><span class="fig-id">Table 1</span> Unified 26-category NVV taxonomy and mappings from source datasets to canonical labels.</figcaption>
       <div class="taxonomy-scroll">
         <table class="taxonomy-table">
           <thead>
@@ -41,112 +71,112 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr class="fam-physical">
               <td class="family-cell" rowspan="19">Physical Vocal Event</td>
               <td>Sniff</td>
-              <td><strong>NVS-38K</strong> ([sniff]); <strong>MNV-17</strong> ([sniffle])</td>
+              <td><span class="ds">NVS-38K</span> <span class="orig">[sniff]</span>; <span class="ds">MNV-17</span> <span class="orig">[sniffle]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Snore</td>
-              <td><strong>NVS-38K</strong> ([snore])</td>
+              <td><span class="ds">NVS-38K</span> <span class="orig">[snore]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Whistle</td>
-              <td><strong>MNV-17</strong> ([whistle])</td>
+              <td><span class="ds">MNV-17</span> <span class="orig">[whistle]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Hum</td>
-              <td><strong>MNV-17</strong> ([hum])</td>
+              <td><span class="ds">MNV-17</span> <span class="orig">[hum]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Sneeze</td>
-              <td><strong>MNV-17</strong> ([sneeze])</td>
+              <td><span class="ds">MNV-17</span> <span class="orig">[sneeze]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Yawn</td>
-              <td><strong>NVS-38K</strong> ([yawn])</td>
+              <td><span class="ds">NVS-38K</span> <span class="orig">[yawn]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Moan</td>
-              <td><strong>MNV-17</strong> ([moan])</td>
+              <td><span class="ds">MNV-17</span> <span class="orig">[moan]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Cry</td>
-              <td><strong>NVS-38K</strong>, <strong>SMIIP-NV</strong> ([crying]); <strong>NVSpeech-170k</strong> ([Crying])</td>
+              <td><span class="ds">NVS-38K</span>, <span class="ds">SMIIP-NV</span> <span class="orig">[crying]</span>; <span class="ds">NVSpeech-170k</span> <span class="orig">[Crying]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Cough</td>
-              <td><strong>NVS-38K</strong> ([coughing]); <strong>NVSpeech-170k</strong> ([Cough]); <strong>MNV-17</strong>, <strong>SMIIP-NV</strong> ([cough])</td>
+              <td><span class="ds">NVS-38K</span> <span class="orig">[coughing]</span>; <span class="ds">NVSpeech-170k</span> <span class="orig">[Cough]</span>; <span class="ds">MNV-17</span>, <span class="ds">SMIIP-NV</span> <span class="orig">[cough]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Throat Clearing</td>
-              <td><strong>NVS-38K</strong> ([throatclearing]); <strong>MNV-17</strong> ([ahem])</td>
+              <td><span class="ds">NVS-38K</span> <span class="orig">[throatclearing]</span>; <span class="ds">MNV-17</span> <span class="orig">[ahem]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Sigh</td>
-              <td><strong>NVS-38K</strong>, <strong>MNV-17</strong> ([sigh]); <strong>NVSpeech-170k</strong> ([Sigh])</td>
+              <td><span class="ds">NVS-38K</span>, <span class="ds">MNV-17</span> <span class="orig">[sigh]</span>; <span class="ds">NVSpeech-170k</span> <span class="orig">[Sigh]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Lip Smack</td>
-              <td><strong>MNV-17</strong> ([smack])</td>
+              <td><span class="ds">MNV-17</span> <span class="orig">[smack]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Hiss</td>
-              <td><strong>MNV-17</strong> ([hiss])</td>
+              <td><span class="ds">MNV-17</span> <span class="orig">[hiss]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Gasp</td>
-              <td><strong>NVS-38K</strong> ([gasp])</td>
+              <td><span class="ds">NVS-38K</span> <span class="orig">[gasp]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Laughter</td>
-              <td><strong>NVS-38K</strong> ([laughing]); <strong>NVSpeech-170k</strong> ([Laughter]); <strong>MNV-17</strong> ([laugh], [chuckle]); <strong>SMIIP-NV</strong> ([laughter])</td>
+              <td><span class="ds">NVS-38K</span> <span class="orig">[laughing]</span>; <span class="ds">NVSpeech-170k</span> <span class="orig">[Laughter]</span>; <span class="ds">MNV-17</span> <span class="orig">[laugh]</span>, <span class="orig">[chuckle]</span>; <span class="ds">SMIIP-NV</span> <span class="orig">[laughter]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Breath</td>
-              <td><strong>NVS-38K</strong> ([breath]); <strong>NVSpeech-170k</strong> ([Breathing]); <strong>MNV-17</strong> ([inhale/exhale/pant])</td>
+              <td><span class="ds">NVS-38K</span> <span class="orig">[breath]</span>; <span class="ds">NVSpeech-170k</span> <span class="orig">[Breathing]</span>; <span class="ds">MNV-17</span> <span class="orig">[inhale/exhale/pant]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Scream</td>
-              <td><em>Added in this work</em></td>
+              <td><span class="added">Added in this work</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Roar</td>
-              <td><em>Added in this work</em></td>
+              <td><span class="added">Added in this work</span></td>
             </tr>
-            <tr>
+            <tr class="fam-physical">
               <td>Burp</td>
-              <td><em>Added in this work</em></td>
+              <td><span class="added">Added in this work</span></td>
             </tr>
-            <tr class="family-sep">
+            <tr class="family-sep fam-func">
               <td class="family-cell" rowspan="6">Functional Interjection</td>
               <td>Shush</td>
-              <td><strong>NVSpeech-170k</strong> ([Shh])</td>
+              <td><span class="ds">NVSpeech-170k</span> <span class="orig">[Shh]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-func">
               <td>Confirmation-X</td>
-              <td><strong>NVSpeech-170k</strong> ([Confirmation-en])</td>
+              <td><span class="ds">NVSpeech-170k</span> <span class="orig">[Confirmation-en]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-func">
               <td>Dissatisfaction-X</td>
-              <td><strong>NVSpeech-170k</strong> ([Dissatisfaction-hnn])</td>
+              <td><span class="ds">NVSpeech-170k</span> <span class="orig">[Dissatisfaction-hnn]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-func">
               <td>Question-X</td>
-              <td><strong>NVSpeech-170k</strong> ([Question-en/ah/oh/ei/yi])</td>
+              <td><span class="ds">NVSpeech-170k</span> <span class="orig">[Question-en/ah/oh/ei/yi]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-func">
               <td>Filled Pause</td>
-              <td><strong>NVSpeech-170k</strong> ([Uhm])</td>
+              <td><span class="ds">NVSpeech-170k</span> <span class="orig">[Uhm]</span></td>
             </tr>
-            <tr>
+            <tr class="fam-func">
               <td>Surprise-X</td>
-              <td><strong>NVSpeech-170k</strong> ([Surprise-ah/oh/wa/yo])</td>
+              <td><span class="ds">NVSpeech-170k</span> <span class="orig">[Surprise-ah/oh/wa/yo]</span></td>
             </tr>
-            <tr class="family-sep">
+            <tr class="family-sep fam-assoc">
               <td class="family-cell">Associated Non-Speech Event</td>
               <td>Applause</td>
-              <td><strong>MNV-17</strong> ([clap], [applaud])</td>
+              <td><span class="ds">MNV-17</span> <span class="orig">[clap]</span>, <span class="orig">[applaud]</span></td>
             </tr>
           </tbody>
         </table>
@@ -156,27 +186,33 @@
 
   <section class="code-bar wrap">
     <a class="code-btn" href="https://github.com/NVV-Locator/NVV-Locator-Code" target="_blank" rel="noopener">
-      <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
       Code &amp; Dataset
     </a>
   </section>
 
-  <div class="divider wrap"></div>
-
-  <section class="demo-heading wrap">
+  <section class="demo-heading wrap" id="demo">
+    <p class="kicker">Interactive cases</p>
     <h2>Qualitative Comparison on NVV-TimeBench</h2>
     <p class="demo-sub">
       26 NVV event types, IoU ≥ 0.5. Each case: NV-Locator correctly localizes the target;
-      all four audio LLMs miss the target interval.
+      all four audio LLMs miss the target interval. Use the left panel or the ← → keys to switch samples.
     </p>
   </section>
 
   <div class="layout wrap">
-    <nav class="sidebar" id="nav"></nav>
+    <nav class="sidebar" aria-label="NVV categories">
+      <div class="sidebar-head">Categories</div>
+      <div id="nav"></div>
+    </nav>
     <main class="main" id="main">
       <p class="loading">Loading samples…</p>
     </main>
   </div>
+
+  <footer class="site-footer">
+    <div class="wrap">NVV-Locator · Qualitative comparison on NVV-TimeBench</div>
+  </footer>
 
   <script src="app.js"></script>
 </body>

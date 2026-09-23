@@ -303,7 +303,10 @@ function renderSample(i) {
 
   document.getElementById("main").innerHTML = `
     <div class="card">
-      <h2>${esc(target)}</h2>
+      <div class="case-meta">
+        <span class="case-index">Case ${String(i + 1).padStart(2, "0")} / ${String(samples.length).padStart(2, "0")}</span>
+      </div>
+      <h2 class="case-title">${esc(target)}</h2>
       <div class="asr">${highlightAsr(s.asr, target)}</div>
     </div>
 
@@ -360,7 +363,7 @@ function buildNav() {
   nav.innerHTML = samples
     .map(
       (s, i) =>
-        `<button class="nav-item" data-i="${i}">${esc(s.category)}</button>`
+        `<button class="nav-item" data-i="${i}"><span class="nav-num">${String(i + 1).padStart(2, "0")}</span>${esc(s.category)}</button>`
     )
     .join("");
   nav.onclick = (e) => {
